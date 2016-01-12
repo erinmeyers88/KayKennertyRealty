@@ -220,7 +220,7 @@ align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	width: 100%;
-	background-image: url("./img/rainbowRowSmall.jpg");
+	background-image: url("/img/rainbowRowSmall.jpg");
 	background-size: cover;
 	border-top: 1px solid black;
 }
@@ -231,7 +231,7 @@ align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	width: 100%;
-	background-image: url("./img/gateSmall.jpg");
+	background-image: url("/img/gateSmall.jpg");
 	background-size: cover;
 	border-top: 1px solid black;
 }
@@ -380,7 +380,7 @@ li {
 
 
 .contactPage {
-	background-image: url('./img/ironSmall.jpg');
+	background-image: url('/img/ironSmall.jpg');
 	background-size: cover;
 	width: 100%;
 	height: 800px;
@@ -486,16 +486,16 @@ section.module.parallax h1 {
 }
 section.module.parallax-1 {
 height: 500px;
-  background-image: url("./img/flowersSmall.jpg");
+  background-image: url("/img/flowersSmall.jpg");
   background-position: 0% 10%;
 }
 section.module.parallax-2 {
-  background-image: url("./img/pinkhouseSmall.jpg");
+  background-image: url("/img/pinkhouseSmall.jpg");
    background-position: 50% 50%;
    height: 800px;
 }
 section.module.parallax-3 {
-  background-image: url("./img/streetSmall.jpg");
+  background-image: url("/img/streetSmall.jpg");
      background-position: 50% 30%;
 	 height: 600px;
 }
