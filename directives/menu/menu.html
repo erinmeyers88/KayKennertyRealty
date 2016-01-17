@@ -1,5 +1,6 @@
 <header>
-	<div class="titleWrapper">
+	
+	<div class="titleWrapper" ui-sref="home" style="cursor:pointer">
 		<div class="headerTitle">Kay Kennerty </div>
 		<div class="headerSubtitle">Experienced Charleston Realtor</div>
 	</div>
@@ -7,14 +8,14 @@
 	<div class="menuLinks">
 		
 		
-		<div ui-sref="resources" ng-class="{'bold': url === '/resources'}">Homebuyer Resources</div>
+		<div ui-sref="resources" ng-class="{'bold': url === '/resources'}" style="cursor:pointer">Homebuyer Resources</div>
 		<div>|</div> 
-		<div ui-sref="charleston" ng-class="{'bold': url === '/charleston'}">Charleston Area</div>
+		<div ui-sref="charleston" ng-class="{'bold': url === '/charleston'}" style="cursor:pointer">Charleston Area</div>
 		<div>|</div> 
-		<div ui-sref="testimonials" ng-class="{'bold': url === '/testimonials'}">Testimonials</div>
+		<div ui-sref="testimonials" ng-class="{'bold': url === '/testimonials'}" style="cursor:pointer">Testimonials</div>
 		<div>|</div> 
-		<div ui-sref="contact" ng-class="{'bold': url === '/contact'}">Contact</div>
+		<div ui-sref="contact" ng-class="{'bold': url === '/contact'}" style="cursor:pointer">Contact</div>
 		<div ng-show="showHome()">|</div> 
-		<div ui-sref="home" ng-show="showHome()">Home</div>
+		<div ui-sref="home" ng-show="showHome()" style="cursor:pointer">Home</div>
 	</div>
 </header>
