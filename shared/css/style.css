@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-    min-width: 1025px;
+    /*min-width: 1025px;*/
     display: flex;
     flex-direction: column;
 	box-sizing: border-box;
@@ -14,7 +14,8 @@ hr {
 
 menu {
     margin: 0;
-	min-width: 1025px;
+	width: 100%;
+	-webkit-padding-start: 0;
 }
 
 .bold {
@@ -24,14 +25,18 @@ menu {
 /*header*/
 header {
 	width: 100%;
-	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    align-items: flex-end;
+	margin-bottom: 1%;
 }
 .titleWrapper {
-    position: absolute;
-    top: 7px;
-    left: 20px;
+    /*position: absolute;*/
+
     display: flex;
     flex-direction: column;
+	margin-left: 1%;
 	
 } 
  
@@ -49,16 +54,35 @@ header {
 }
  
 .menuLinks {
-    position: absolute;
-    top: 67px;
-    right: 20px;
     font: 100 20px Helvetica, Verdana, sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 650px;
+    width: 675px;
+	margin-right: 1%;
 } 
 
+.menuIcon {
+	display: none;
+}
+
+.mobileMenu {
+	display: none;
+	z-index: 100;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font: 100 20px Helvetica, Verdana, sans-serif;
+}
+
+.mobileMenu div {
+	
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
 
 a {
     text-decoration: none;
@@ -186,7 +210,7 @@ align-items: center;
     width: 60%; 
 	margin: 15px;
 	background-color:rgba(255,255,255, .8);
-	padding: 20px;
+	padding: 10px;
 	
 }  
   
@@ -241,7 +265,7 @@ align-items: center;
 }
 
 .tileAreaWrapper {
-	width: 65%;
+	width: 75%;
 	margin-top: 100px;
 	display: flex;
 	flex-direction: row;
@@ -262,7 +286,7 @@ align-items: center;
 	border: 5px solid black;
 	font: 100 25px/1.5 Helvetica, Verdana, sans-serif;
 	text-align: center;
-	margin-bottom: 20px;
+	margin: 20px;
 	background-color: white;
 	padding: 15px;
 	box-sizing: border-box;	
@@ -293,6 +317,12 @@ align-items: center;
 }
 
 .containerRow {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.containerRow2 {
 	display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -333,6 +363,10 @@ align-items: center;
 	flex-direction: column;
 }
 
+.mobileHobbies {
+	display: none;
+}
+
 li {
    list-style-position: inside;
 }
@@ -356,7 +390,6 @@ li {
 		display: flex;
     flex-direction: column;
     align-items: center;
-	    margin: 40px;
 }
 
 .black {
@@ -384,6 +417,8 @@ li {
 	opacity: .8;
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 
@@ -411,15 +446,13 @@ li {
 .contactBox {
 	font: 100 25px/1.5 Helvetica, Verdana, sans-serif;	
 		text-align: center;
-		width: 40%;
-		/*height: 30%;*/
+		height: 250px;
 		display: flex;
     flex-direction: column;
     align-items: center;
 	background-color: rgba(255,255,255, .7);
-	justify-content: center;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	justify-content: space-around;
+    padding: 25px;
 }
 
 .contactMainPage {
@@ -481,12 +514,12 @@ section.module.parallax h1 {
   color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
   text-align: center;
-  font: 100 40px Helvetica, Verdana, sans-serif;
+  font: 100 40px/1.25 Helvetica, Verdana, sans-serif;
   text-shadow: 0 0 25px rgba(0, 0, 0, 1.5);
   margin: 0px;
 }
 
-@media all and (min-width: 600px) {
+/*@media all and (min-width: 600px) {
   section.module h2 {
     font-size: 40px;
   }
@@ -496,12 +529,12 @@ section.module.parallax h1 {
   section.module.parallax h1 {
     font-size: 40px;
   }
-}
-@media all and (min-width: 960px) {
+}*/
+/*@media all and (min-width: 960px) {
   section.module.parallax h1 {
     font-size: 40px;
   }
-}
+}*/
 section.module.parallax-1 {
 height: 500px;
   background-image: url("/shared/img/flowersSmall.jpg");
@@ -518,3 +551,250 @@ section.module.parallax-3 {
 	 height: 600px;
 }
 
+
+
+
+/*Media Queries*/
+
+@media (max-width: 1050px) {
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.menuLinks {
+		margin: 1.5%;
+	}
+	
+	.containerRow {
+		flex-direction: column;
+		align-items: center;
+	}
+	.containerRow2 {
+		flex-direction: column;
+	}
+	
+	section.module.parallax h1 {
+  
+    font: 100 35px/1.5 Helvetica, Verdana, sans-serif;
+   
+	}
+	
+}
+
+
+@media (max-width: 852px) {
+	header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	
+	.menuIcon {
+		display: flex;
+		margin-right: 30px;
+		cursor: pointer;
+	}
+	.menuLinks {
+		display: none;
+	}
+	
+	.mobileMenu {
+		display: flex;
+		
+	}
+	
+	.testimonial {
+		margin: 10px;
+	}
+	
+	section.module.parallax h1 {
+  
+    font: 100 30px/1.5 Helvetica, Verdana, sans-serif;
+   
+	}
+	
+}
+
+@media (max-width: 720px) {
+	.testimonialText {
+    font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
+ 
+	}
+	
+	.aboutIntro {
+    font: 100 22px/1.5 Helvetica, Verdana, sans-serif;
+
+}
+
+	.tile {
+		height: 200px;
+		width: 200px;
+		margin: 10px;
+	}
+	
+}
+
+@media (max-width: 620px) {
+	
+	.aboutText {
+    font: 100 16px/2.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	.aboutTextSmall {
+    	font: 100 14px/2.5 Helvetica, Verdana, sans-serif;
+	}
+
+	.hobbies {
+		text-align: center;
+	}
+	.testimonialText {
+    font: 100 18px/1.5 Helvetica, Verdana, sans-serif;
+ 
+	}
+	
+	.aboutIntro {
+    font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
+
+	}
+
+	.testimonialTitle {
+		font: 400 22px/1.5 Helvetica, Verdana, sans-serif;
+	}
+
+	.clientTitle {
+    font: 100 18px/1.5 Helvetica, Verdana, sans-serif;
+ 
+	}
+	
+	
+	.aboutTitle {
+    font-size: 20px;
+	}
+	
+	.tile {
+		height: 175px;
+		width: 175px;
+		margin: 10px;
+		font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	.tile span {
+    font: 100 10px/1.5 Helvetica, Verdana, sans-serif;
+}
+	
+	
+}
+
+@media (max-width: 534px) {
+	
+	.tile {
+		height: 150px;
+		width: 150px;
+		margin: 10px;
+		font: 100 14px/1.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	.tile span {
+    font: 100 8px/1.5 Helvetica, Verdana, sans-serif;
+}
+	
+	section.module.parallax h1 {
+  
+    font: 100 25px/1.5 Helvetica, Verdana, sans-serif;
+   
+	}
+	
+	.aboutText {
+    font: 100 14px/2.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	/*.aboutTextSmall {
+    	font: 100 12px/2.5 Helvetica, Verdana, sans-serif;
+	}*/
+	
+	.contactBox {
+		 font: 100 20px/1.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	.mobileMenu {
+		display: flex;
+		 font: 100 16px/1.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	.mobileMenu div {
+		margin: 5px;
+	}
+	
+	.headerTitle {
+    font: 100 30px/1.2 Helvetica, Verdana, sans-serif;
+   
+	}
+	
+	.headerSubtitle {
+    font: 100 14px Helvetica, Verdana, sans-serif;
+	font-style: italic;
+  
+}
+
+	.picture img {
+		width: 105px;
+	}
+	
+}
+
+@media (max-width: 450px) {
+	
+	
+	.tile {
+		height: 100px;
+		width: 100px;
+		margin: 10px;
+		font: 100 12px/1.5 Helvetica, Verdana, sans-serif;
+	}
+	.tile span {
+    font: 100 8px/1.5 Helvetica, Verdana, sans-serif;
+}
+	
+	section.module.parallax h1 {
+  
+    font: 100 22px/1.5 Helvetica, Verdana, sans-serif;
+   
+	}
+	
+	.aboutIntro {
+    font: 100 16px/1.5 Helvetica, Verdana, sans-serif;
+}
+	
+	.aboutText {
+    font: 100 14px/2.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	.aboutTextSmall {
+    	font: 100 12px/2.5 Helvetica, Verdana, sans-serif;
+	}
+
+	
+	.contactBox {
+		 font: 100 18px/1.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	
+	.testimonialTitle {
+		font: 400 18px/1.5 Helvetica, Verdana, sans-serif;
+	}
+	
+	.testimonialText {
+    font: 100 16px/1.5 Helvetica, Verdana, sans-serif;
+ 
+	}
+	
+	.clientTitle {
+    font: 100 16px/1.5 Helvetica, Verdana, sans-serif;
+ 
+	}
+	
+}

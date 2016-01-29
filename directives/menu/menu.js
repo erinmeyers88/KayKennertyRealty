@@ -14,6 +14,13 @@ angular.module("kayKennerty")
 						return true;
 					}
 				};	
+				
+				$scope.mobileMenu = false;
+				
+				$scope.showMobileMenu = function () {
+					$scope.mobileMenu = !$scope.mobileMenu;	
+				};
+				
 			}
 		};
 	});
